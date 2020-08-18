@@ -17,29 +17,23 @@ public class Joptionpane {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        // eu quero um programa onde o usuário digite seu nome, confirme se o nome é aquele, e apaareca uma janela com o nome dele
+        
         String nome;
-        int resposta = 0;
-
-        //janela para o usuário inserir dados;
-        nome = JOptionPane.showInputDialog(null, "Qual o seu nome?", "pesquisa", 3);
-
-        // janela de confirmação de dados
-        JOptionPane.showConfirmDialog(null, "O seu nome é " + nome + "?");
-
-// verifica se o usuário clicou no botão YES
-        if (resposta == JOptionPane.YES_OPTION) {
-
-//JOptionPane.showMessageDialog(null, "Seu nome é " + nome); 
-            JOptionPane.showMessageDialog(null, "seu nome é " + nome);
-        } else {
-
-            JOptionPane.showMessageDialog(null, "Seu nome não é " + nome);
-
-        }
-
-
-
-    }
+        int resposta;
+        
+        //primeira janela pra inserção do nome
+        nome = JOptionPane.showInputDialog("Qual seu nome?");
+        
+        //janela de confirmação de nome
+        resposta = JOptionPane.showConfirmDialog(null, "O seu nome é: "+nome+"?");
+            
+       // tratar se o nome é ou não do usuário       
+            if(resposta==JOptionPane.YES_OPTION){
+                JOptionPane.showMessageDialog(null, "O seu nome é: "+nome);
+            }else{
+                JOptionPane.showMessageDialog(null, "O seu nome NÃO é: "+nome);
     
+    }
+        }
 }
